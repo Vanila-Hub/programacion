@@ -1,0 +1,1 @@
+Nombre,Defensa,Salud,Ataque,Tipo,Nivel,Nombre jugador

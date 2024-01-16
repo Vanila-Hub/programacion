@@ -1,0 +1,2 @@
+mikel:badiola:1:Mbadiola:1234:0
+iker:lourido:2:Ilourido:1234:1

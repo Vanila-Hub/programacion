@@ -9,5 +9,4 @@ public class CompararAreas implements Comparator<Figura>{
 		 
 		return Double.compare(f1.getArea(), f2.getArea());
 	}
-
 }

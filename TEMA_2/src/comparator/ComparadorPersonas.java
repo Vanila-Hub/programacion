@@ -2,6 +2,8 @@ package comparator;
 
 import java.util.Comparator;
 
+import comparator.Persona;
+
 public class ComparadorPersonas implements Comparator<Persona>{
 
 

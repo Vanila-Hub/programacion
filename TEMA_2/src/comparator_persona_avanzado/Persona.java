@@ -1,13 +1,13 @@
-package comparator_persona;
+package comparator_persona_avanzado;
 
 import java.text.SimpleDateFormat;
 
-public class PersonaAvanzadas {
+public class Persona {
 	
 	private String nombre;
 	private String apellido;
 	private String Dni;
-	private SimpleDateFormat fecha_nacimiento;
+	private String fecha_nacimiento;
 	public String getNombre() {
 		return nombre;
 	}
@@ -26,10 +26,10 @@ public class PersonaAvanzadas {
 	public void setDni(String dni) {
 		Dni = dni;
 	}
-	public SimpleDateFormat getFecha_nacimiento() {
+	public String getFecha_nacimiento() {
 		return fecha_nacimiento;
 	}
-	public void setFecha_nacimiento(SimpleDateFormat fecha_nacimiento) {
+	public void setFecha_nacimiento(String fecha_nacimiento) {
 		this.fecha_nacimiento = fecha_nacimiento;
 	}
 	

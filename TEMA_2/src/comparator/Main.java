@@ -47,8 +47,7 @@ public class Main {
 		//personas ordenadas
 		for (Persona persona : personas) {
 			System.out.println(persona.getNombre());
-		}
-		
+		}	
 	}
 
 }

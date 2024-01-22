@@ -8,5 +8,4 @@ public class CompararMasjoven implements Comparator<Persona>{
 	public int compare(Persona o1, Persona o2) {
 		return o2.getFecha_nacimiento().compareTo(o1.getFecha_nacimiento());
 	}
-
 }

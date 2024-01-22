@@ -16,13 +16,7 @@ public class Main {
 		final int ELIMINAR_ALUMNO= 4;
 		final int SALIR = 5;
 		
-		System.out.println("_Menu: ");
-		System.out.println(CREAR_PERSONA + " :CREAR PERSONA");
-		System.out.println(ORDENADO_ASCENDENTE + " :ORDENADO_ASCENDENTE");
-		System.out.println(ORDENADO_DESCENDENTE + " :ORDENADO_DESCENDENTE");
-		System.out.println(ORDENADO_MASJOVEN + " :ORDENADO_MASJOVEN");
-		System.out.println(ELIMINAR_ALUMNO + " :ELIMINAR_ALUMNO");
-		System.out.println(SALIR + " :SALIR");
+		int opcion;
 		
 		do {
 			System.out.println("_Menu: ");
@@ -33,7 +27,9 @@ public class Main {
 			System.out.println(ELIMINAR_ALUMNO + " :ELIMINAR_ALUMNO");
 			System.out.println(SALIR + " :SALIR");
 			
-			switch (Integer.parseInt(scan.nextLine())) {
+			opcion = Integer.parseInt(scan.nextLine());
+			
+			switch (opcion) {
 			case CREAR_PERSONA:
 				Persona persona = new Persona();
 				
@@ -47,6 +43,7 @@ public class Main {
 				persona.setFecha_nacimiento(scan.nextLine());
 				
 				personas.add(persona);
+				
 				break;
 				
 			case ORDENADO_ASCENDENTE:
@@ -73,7 +70,8 @@ public class Main {
 					if (personas.get(i).getDni().equalsIgnoreCase(scan.nextLine())) {
 						personas.remove(i);
 						System.out.println("Persona eliminada correctamente:");
-					}
+						break;
+					}else {System.out.println("Buscando...");}
 				}
 				break;
 			case SALIR:
@@ -82,7 +80,7 @@ public class Main {
 			default:
 				break;
 			}
-		} while (Integer.parseInt(scan.nextLine())!=SALIR);
+		} while (opcion!=SALIR);
 		
 	}
 

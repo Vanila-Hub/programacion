@@ -10,5 +10,4 @@ public class ComparadorPersonas implements Comparator<PersonaAvanzadas>{
 	public int compare(PersonaAvanzadas p1, PersonaAvanzadas p2) {
 		return p1.getNombre().compareTo(p2.getNombre());
 	}
-
 }

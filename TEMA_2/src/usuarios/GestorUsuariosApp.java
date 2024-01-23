@@ -137,7 +137,7 @@ public class GestorUsuariosApp {
 		System.out.println("contraseña: ");
 		opcion = scan.next();
 		usuario.setContraseña(opcion);
-		usuario.setId(random.nextInt(3,100));
+		usuario.setId(3);
 		usuario.setEstado(random.nextBoolean());
 		usuarios.add(usuario);
 	}

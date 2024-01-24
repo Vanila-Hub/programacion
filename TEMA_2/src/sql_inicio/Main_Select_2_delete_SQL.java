@@ -6,19 +6,27 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import interfaces.ConexionEthernet;
 
-public class Main_Select_SQL {
+public class Main_Select_2_delete_SQL {
 
 	public static void main(String[] args) {
 		ArrayList<Tarea> tareas = new ArrayList<Tarea>();
 		Tarea tarea = new Tarea();
+		Scanner scan = new Scanner(System.in);
 		String BBDD = "gestor_tarea";
 		String Usuario = "root";
 		String contraseña = "";
 		String host = "localhost";
 		
+		
+		//pedir el ID
+		System.out.println("Introduzca su ID");
+		int id = Integer.parseInt(scan.nextLine());
+		//leer el ID
+		String checkId = "SELECT * FROM tareas WHERE ID = " + id;
 		//cargar la clase de la libreria
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -32,7 +40,7 @@ public class Main_Select_SQL {
 			//crear el statement
 			Statement st = conexion.createStatement();
 			//ejecutar la consulta y recibir eñ resultao
-			ResultSet resultado = st.executeQuery("SELECT * FROM tareas where id =1 ");
+			ResultSet resultado = st.executeQuery(checkId);
 			//Recorrer y pintar en pantalla
 			while (resultado.next()) {
 				tarea = new Tarea();

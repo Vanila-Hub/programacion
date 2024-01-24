@@ -48,6 +48,15 @@ public class Main_Select_2_delete_SQL {
 				System.out.println("Error al inentar eliminar al alumno con _id " + id);
 			}
 			
+			ResultSet resultado2 = st.executeQuery("SELECT * FROM tareas");
+			//Recorrer y pintar en pantalla
+			while (resultado2.next()) {
+				tarea = new Tarea();
+				tarea.setId(resultado2.getInt("id"));
+				tarea.setTitulo(resultado2.getString("titulo"));
+				tarea.setDescripcion(resultado2.getString("descripcion"));
+				tareas.add(tarea);
+			}
 			for (Tarea tareaa : tareas) {
 				System.out.println(tareaa.toString());
 			}

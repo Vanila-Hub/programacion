@@ -26,7 +26,7 @@ public class Main_Select_2_delete_SQL {
 		System.out.println("Introduzca su ID");
 		int id = Integer.parseInt(scan.nextLine());
 		//leer el ID
-		String checkId = "SELECT * FROM tareas WHERE ID = " + id;
+		String checkId = "DELETE FROM tareas WHERE ID = " + id;
 		//cargar la clase de la libreria
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -40,14 +40,13 @@ public class Main_Select_2_delete_SQL {
 			//crear el statement
 			Statement st = conexion.createStatement();
 			//ejecutar la consulta y recibir eñ resultao
-			ResultSet resultado = st.executeQuery(checkId);
+			boolean resultado = st.execute(checkId);
 			//Recorrer y pintar en pantalla
-			    resultado.next();
-				tarea = new Tarea();
-				tarea.setId(resultado.getInt("id"));
-				tarea.setTitulo(resultado.getString("titulo"));
-				tarea.setDescripcion(resultado.getString("descripcion"));
-				tareas.add(tarea);
+			if (resultado==false) {
+				System.out.println("1 columna se ha visto afectada _" + id);
+			}else {
+				System.out.println("Error al inentar eliminar al alumno con _id " + id);
+			}
 			
 			for (Tarea tareaa : tareas) {
 				System.out.println(tareaa.toString());

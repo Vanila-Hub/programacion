@@ -57,5 +57,4 @@ public class Main_Select_2_delete_SQL {
 			e.printStackTrace();
 		}
 	}
-
 }

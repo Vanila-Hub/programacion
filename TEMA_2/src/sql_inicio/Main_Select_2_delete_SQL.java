@@ -42,13 +42,13 @@ public class Main_Select_2_delete_SQL {
 			//ejecutar la consulta y recibir eñ resultao
 			ResultSet resultado = st.executeQuery(checkId);
 			//Recorrer y pintar en pantalla
-			while (resultado.next()) {
+			    resultado.next();
 				tarea = new Tarea();
 				tarea.setId(resultado.getInt("id"));
 				tarea.setTitulo(resultado.getString("titulo"));
 				tarea.setDescripcion(resultado.getString("descripcion"));
 				tareas.add(tarea);
-			}
+			
 			for (Tarea tareaa : tareas) {
 				System.out.println(tareaa.toString());
 			}

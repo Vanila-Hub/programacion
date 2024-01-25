@@ -43,7 +43,7 @@ public class Main_Select_2_delete_SQL {
 			boolean resultado = st.execute(checkId);
 			//Recorrer y pintar en pantalla
 			if (resultado==false) {
-				System.out.println("1 columna se ha visto afectada _" + id);
+				System.out.println("1 columna se ha visto afectada _ID: " + id);
 			}else {
 				System.out.println("Error al inentar eliminar al alumno con _id " + id);
 			}
